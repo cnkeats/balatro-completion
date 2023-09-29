@@ -1,4 +1,4 @@
-import abstract_Joker from './abstract-joker.png';
+import abstractJoker from './abstract-joker.png';
 import acrobat from './acrobat.png';
 import arrowhead from './arrowhead.png';
 import banner from './banner.png';
@@ -6,85 +6,178 @@ import bloodstone from './bloodstone.png';
 import blueprint from './blueprint.png';
 import bootstraps from './bootstraps.png';
 import brainstorm from './brainstorm.png';
-import burnt_Joker from './burnt-joker.png';
-import business_Card from './business-card.png';
+import burntJoker from './burnt-joker.png';
+import businessCard from './business-card.png';
 import caino from './caino.png';
-import ceremonial_Dagger from './ceremonial-dagger.png';
+import ceremonialDagger from './ceremonial-dagger.png';
 import certificate from './certificate.png';
-import chaos_The_Clown from './chaos-the-clown.png';
+import chaosTheClown from './chaos-the-clown.png';
 import chicot from './chicot.png';
-import crazy_Joker from './crazy-joker.png';
-import credit_Card from './credit-card.png';
-import delayed_Gratification from './delayed-gratification.png';
-import drivers_License from './drivers-license.png';
-import droll_Joker from './droll-joker.png';
+import crazyJoker from './crazy-joker.png';
+import creditCard from './credit-card.png';
+import delayedGratification from './delayed-gratification.png';
+import driversLicense from './drivers-license.png';
+import drollJoker from './droll-joker.png';
 import drunkard from './drunkard.png';
 import dusk from './dusk.png';
-import eight_ball from './8-ball.png';
-import even_Steven from './even-steven.png';
+import eightball from './8-ball.png';
+import evenSteven from './even-steven.png';
 import fibonacci from './fibonacci.png';
-import flower_Pot from './flower-pot.png';
-import fortune_Teller from './fortune-teller.png';
-import four_Fingers from './four-fingers.png';
-import glass_Joker from './glass-joker.png';
-import gluttenous_Joker from './gluttenous-joker.png';
-import golden_Joker from './golden-joker.png';
-import golden_Ticket from './golden-ticket.png';
-import greedy_Joker from './greedy-joker.png';
-import gros_Michel from './gros-michel.png';
+import flowerPot from './flower-pot.png';
+import fortuneTeller from './fortune-teller.png';
+import fourFingers from './four-fingers.png';
+import glassJoker from './glass-joker.png';
+import gluttenousJoker from './gluttenous-joker.png';
+import goldenJoker from './golden-joker.png';
+import goldenTicket from './golden-ticket.png';
+import greedyJoker from './greedy-joker.png';
+import grosMichel from './gros-michel.png';
 import hack from './hack.png';
-import half_Joker from './half-joker.png';
-import hanging_Chad from './hanging-chad.png';
-import hit_The_Road from './hit-the-road.png';
-import invisible_Joker from './invisible-joker.png';
+import halfJoker from './half-joker.png';
+import hangingChad from './hanging-chad.png';
+import hitTheRoad from './hit-the-road.png';
+import invisibleJoker from './invisible-joker.png';
 import joker from './joker.png';
-import joker_Stencil from './joker-stencil.png';
-import jolly_Joker from './jolly-joker.png';
+import jokerStencil from './joker-stencil.png';
+import jollyJoker from './jolly-joker.png';
 import juggler from './juggler.png';
-import loyalty_Card from './loyalty-card.png';
-import lusty_Joker from './lusty-joker.png';
-import mad_Joker from './mad-joker.png';
-import marble_Joker from './marble-joker.png';
+import loyaltyCard from './loyalty-card.png';
+import lustyJoker from './lusty-joker.png';
+import madJoker from './mad-joker.png';
+import marbleJoker from './marble-joker.png';
 import matador from './matador.png';
-import merry_Andy from './merry-andy.png';
+import merryAndy from './merry-andy.png';
 import mime from './mime.png';
 import misprint from './misprint.png';
-import mr_Bones from './mr-bones.png';
-import mystic_Summit from './mystic-summit.png';
-import odd_Todd from './odd-todd.png';
-import onyx_Agate from './onyx-agate.png';
-import oops_All_sixes from './oops-all-6s.png';
+import mrBones from './mr-bones.png';
+import mysticSummit from './mystic-summit.png';
+import oddTodd from './odd-todd.png';
+import onyxAgate from './onyx-agate.png';
+import oopsAllsixes from './oops-all-6s.png';
 import pareidolia from './pareidolia.png';
 import perkeo from './perkeo.png';
-import raised_Fist from './raised-fist.png';
-import ride_The_Bus from './ride-the-bus.png';
-import ring_Master from './ring-master.png';
-import rough_Gem from './rough-gem.png';
+import raisedFist from './raised-fist.png';
+import rideTheBus from './ride-the-bus.png';
+import ringMaster from './ring-master.png';
+import roughGem from './rough-gem.png';
 import satellite from './satellite.png';
-import scary_Face from './scary-face.png';
+import scaryFace from './scary-face.png';
 import scholar from './scholar.png';
-import seeing_Double from './seeing-double.png';
-import shoot_The_Moon from './shoot-the-moon.png';
-import smeared_Joker from './smeared-joker.png';
-import sock_And_Buskin from './sock-and-buskin.png';
-import space_Joker from './space-joker.png';
-import steel_Joker from './steel-joker.png';
-import stone_Joker from './stone-joker.png';
+import seeingDouble from './seeing-double.png';
+import shootTheMoon from './shoot-the-moon.png';
+import smearedJoker from './smeared-joker.png';
+import sockAndBuskin from './sock-and-buskin.png';
+import spaceJoker from './space-joker.png';
+import steelJoker from './steel-joker.png';
+import stoneJoker from './stone-joker.png';
 import stuntman from './stuntman.png';
 import supernova from './supernova.png';
 import swashbuckler from './swashbuckler.png';
-import the_Astronomer from './the-astronomer.png';
-import the_Cartomancer from './the-cartomancer.png';
-import the_Duo from './the-duo.png';
-import the_Family from './the-family.png';
-import the_Idol from './the-idol.png';
-import the_Order from './the-order.png';
-import the_Tribe from './the-tribe.png';
-import the_Trio from './the-trio.png';
+import theAstronomer from './the-astronomer.png';
+import theCartomancer from './the-cartomancer.png';
+import theDuo from './the-duo.png';
+import theFamily from './the-family.png';
+import theIdol from './the-idol.png';
+import theOrder from './the-order.png';
+import theTribe from './the-tribe.png';
+import theTrio from './the-trio.png';
 import throwback from './throwback.png';
 import triboulet from './triboulet.png';
 import troubadour from './troubadour.png';
-import wee_Joker from './wee-joker.png';
-import wrathful_Joker from './wrathful-joker.png';
+import weeJoker from './wee-joker.png';
+import wrathfulJoker from './wrathful-joker.png';
 import yorick from './yorick.png';
-import zany_Joker from './zany-joker.png';
+import zanyJoker from './zany-joker.png';
+
+export {
+    abstractJoker,
+    acrobat,
+    arrowhead,
+    banner,
+    bloodstone,
+    blueprint,
+    bootstraps,
+    brainstorm,
+    burntJoker,
+    businessCard,
+    caino,
+    ceremonialDagger,
+    certificate,
+    chaosTheClown,
+    chicot,
+    crazyJoker,
+    creditCard,
+    delayedGratification,
+    driversLicense,
+    drollJoker,
+    drunkard,
+    dusk,
+    eightball,
+    evenSteven,
+    fibonacci,
+    flowerPot,
+    fortuneTeller,
+    fourFingers,
+    glassJoker,
+    gluttenousJoker,
+    goldenJoker,
+    goldenTicket,
+    greedyJoker,
+    grosMichel,
+    hack,
+    halfJoker,
+    hangingChad,
+    hitTheRoad,
+    invisibleJoker,
+    joker,
+    jokerStencil,
+    jollyJoker,
+    juggler,
+    loyaltyCard,
+    lustyJoker,
+    madJoker,
+    marbleJoker,
+    matador,
+    merryAndy,
+    mime,
+    misprint,
+    mrBones,
+    mysticSummit,
+    oddTodd,
+    onyxAgate,
+    oopsAllsixes,
+    pareidolia,
+    perkeo,
+    raisedFist,
+    rideTheBus,
+    ringMaster,
+    roughGem,
+    satellite,
+    scaryFace,
+    scholar,
+    seeingDouble,
+    shootTheMoon,
+    smearedJoker,
+    sockAndBuskin,
+    spaceJoker,
+    steelJoker,
+    stoneJoker,
+    stuntman,
+    supernova,
+    swashbuckler,
+    theAstronomer,
+    theCartomancer,
+    theDuo,
+    theFamily,
+    theIdol,
+    theOrder,
+    theTribe,
+    theTrio,
+    throwback,
+    triboulet,
+    troubadour,
+    weeJoker,
+    wrathfulJoker,
+    yorick,
+    zanyJoker,
+};
