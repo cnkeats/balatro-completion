@@ -9,8 +9,8 @@ import DeckList from './types/DeckList';
 
 const Grid = styled.div`
     display: grid;
-    grid-template-columns: repeat(5, 192px);
-    outline: 1px solid black;
+    grid-template-columns: repeat(5, 142px);
+    outline: 0px solid black;
     grid-gap: 0px;
 `
 
@@ -73,6 +73,10 @@ function App() {
     
     const gridItems: JSX.Element[] = [<GridItem key='0' />, <GridItem key='1' />];
   
+    DeckList.forEach(d => {
+        gridItems.push(<GridItem><JokerName>{d.name}</JokerName></GridItem>);
+    });
+    gridItems.push(<GridItem key='0' />, <GridItem key='0' />);
     DeckList.forEach(d => {
         gridItems.push(<GridItem><img key={d.name} src={d.image}></img></GridItem>);
     });
