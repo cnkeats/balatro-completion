@@ -1,4 +1,8 @@
-import { abstractJoker, acrobat, arrowhead, banner, bloodstone, blueprint, bootstraps, brainstorm, burntJoker, businessCard, caino, ceremonialDagger, certificate, chaosTheClown, chicot, crazyJoker, creditCard, delayedGratification, driversLicense, drollJoker, drunkard, dusk, eightball, evenSteven, fibonacci, flowerPot, fortuneTeller, fourFingers, glassJoker, gluttenousJoker, goldenJoker, goldenTicket, greedyJoker, grosMichel, hack, halfJoker, hangingChad, hitTheRoad, invisibleJoker, joker, jokerStencil, jollyJoker, juggler, loyaltyCard, lustyJoker, madJoker, marbleJoker, matador, merryAndy, mime, misprint, mrBones, mysticSummit, oddTodd, onyxAgate, oopsAllsixes, pareidolia, perkeo, raisedFist, rideTheBus, ringMaster, roughGem, satellite, scaryFace, scholar, seeingDouble, shootTheMoon, smearedJoker, sockAndBuskin, spaceJoker, steelJoker, stoneJoker, stuntman, supernova, swashbuckler, theAstronomer, theCartomancer, theDuo, theFamily, theIdol, theOrder, theTribe, theTrio, throwback, triboulet, troubadour, weeJoker, wrathfulJoker, yorick, zanyJoker } from "../assets/jokers"
+import { abstractJoker, acrobat, arrowhead, banner, bloodstone, blueprint, bootstraps, brainstorm, burntJoker, businessCard, caino, ceremonialDagger, certificate, chaosTheClown, chicot, crazyJoker, creditCard,
+    delayedGratification, driversLicense, drollJoker, drunkard, dusk, eightball, evenSteven, fibonacci, flowerPot, fortuneTeller, fourFingers, glassJoker, gluttenousJoker, goldenJoker, goldenTicket, greedyJoker,
+    grosMichel, hack, halfJoker, hangingChad, hitTheRoad, invisibleJoker, joker, jokerStencil, jollyJoker, juggler, loyaltyCard, lustyJoker, madJoker, marbleJoker, matador, merryAndy, mime, misprint, mrBones,
+    mysticSummit, oddTodd, onyxAgate, oopsAllsixes, pareidolia, perkeo, raisedFist, rideTheBus, ringMaster, roughGem, satellite, scaryFace, scholar, seeingDouble, shootTheMoon, smearedJoker, sockAndBuskin, spaceJoker,
+    steelJoker, stoneJoker, stuntman, supernova, swashbuckler, theAstronomer, theCartomancer, theDuo, theFamily, theIdol, theOrder, theTribe, theTrio, throwback, triboulet, troubadour, weeJoker, wrathfulJoker, yorick, zanyJoker } from '../assets/jokers'
 import { JokerType } from "./types"
 
 const AbstractJoker: JokerType = {
@@ -71,7 +75,7 @@ const CeremonialDagger: JokerType = {
     name: 'Ceremonial Dagger',
     image: ceremonialDagger,
     description: '',
-    enabled: false
+    enabled: true
 }
 const Certificate: JokerType = {
     name: 'Certificate',
@@ -95,7 +99,7 @@ const CrazyJoker: JokerType = {
     name: 'CrazyJoker',
     image: crazyJoker,
     description: '',
-    enabled: false
+    enabled: true
 }
 const CreditCard: JokerType = {
     name: 'CreditCard',
@@ -119,7 +123,7 @@ const DrollJoker: JokerType = {
     name: 'DrollJoker',
     image: drollJoker,
     description: '',
-    enabled: false
+    enabled: true
 }
 const Drunkard: JokerType = {
     name: 'Drunkard',
@@ -128,28 +132,28 @@ const Drunkard: JokerType = {
     enabled: false
 }
 const Dusk: JokerType = {
-    name: 'dusk',
+    name: 'Dusk',
     image: dusk,
     description: '',
     enabled: true
 }
-const Eightball: JokerType = {
-    name: 'Eightball',
+const EightBall: JokerType = {
+    name: '8 Ball',
     image: eightball,
     description: '',
-    enabled: false
+    enabled: true
 }
 const EvenSteven: JokerType = {
     name: 'EvenSteven',
     image: evenSteven,
     description: '',
-    enabled: false
+    enabled: true
 }
 const Fibonacci: JokerType = {
     name: 'Fibonacci',
     image: fibonacci,
     description: '',
-    enabled: false
+    enabled: true
 }
 const FlowerPot: JokerType = {
     name: 'FlowerPot',
@@ -167,7 +171,7 @@ const FourFingers: JokerType = {
     name: 'FourFingers',
     image: fourFingers,
     description: '',
-    enabled: false
+    enabled: true
 }
 const GlassJoker: JokerType = {
     name: 'GlassJoker',
@@ -185,7 +189,7 @@ const GoldenJoker: JokerType = {
     name: 'GoldenJoker',
     image: goldenJoker,
     description: '',
-    enabled: false
+    enabled: true
 }
 const GoldenTicket: JokerType = {
     name: 'GoldenTicket',
@@ -203,7 +207,7 @@ const GrosMichel: JokerType = {
     name: 'GrosMichel',
     image: grosMichel,
     description: '',
-    enabled: false
+    enabled: true
 }
 const Hack: JokerType = {
     name: 'hack',
@@ -215,7 +219,7 @@ const HalfJoker: JokerType = {
     name: 'HalfJoker',
     image: halfJoker,
     description: '',
-    enabled: false
+    enabled: true
 }
 const HangingChad: JokerType = {
     name: 'HangingChad',
@@ -239,13 +243,13 @@ const Joker: JokerType = {
     name: 'Joker',
     image: joker,
     description: '',
-    enabled: false
+    enabled: true
 }
 const JokerStencil: JokerType = {
     name: 'JokerStencil',
     image: jokerStencil,
     description: '',
-    enabled: false
+    enabled: true
 }
 const JollyJoker: JokerType = {
     name: 'JollyJoker',
@@ -257,13 +261,13 @@ const Juggler: JokerType = {
     name: 'Juggler',
     image: juggler,
     description: '',
-    enabled: false
+    enabled: true
 }
 const LoyaltyCard: JokerType = {
     name: 'LoyaltyCard',
     image: loyaltyCard,
     description: '',
-    enabled: false
+    enabled: true
 }
 const LustyJoker: JokerType = {
     name: 'LustyJoker',
@@ -275,13 +279,13 @@ const MadJoker: JokerType = {
     name: 'MadJoker',
     image: madJoker,
     description: '',
-    enabled: false
+    enabled: true
 }
 const MarbleJoker: JokerType = {
     name: 'MarbleJoker',
     image: marbleJoker,
     description: '',
-    enabled: false
+    enabled: true
 }
 const Matador: JokerType = {
     name: 'Matador',
@@ -305,7 +309,7 @@ const Misprint: JokerType = {
     name: 'Misprint',
     image: misprint,
     description: '',
-    enabled: false
+    enabled: true
 }
 const MrBones: JokerType = {
     name: 'MrBones',
@@ -317,13 +321,13 @@ const MysticSummit: JokerType = {
     name: 'MysticSummit',
     image: mysticSummit,
     description: '',
-    enabled: false
+    enabled: true
 }
 const OddTodd: JokerType = {
     name: 'OddTodd',
     image: oddTodd,
     description: '',
-    enabled: false
+    enabled: true
 }
 const OnyxAgate: JokerType = {
     name: 'OnyxAgate',
@@ -353,13 +357,13 @@ const RaisedFist: JokerType = {
     name: 'RaisedFist',
     image: raisedFist,
     description: '',
-    enabled: false
+    enabled: true
 }
 const RideTheBus: JokerType = {
     name: 'RideTheBus',
     image: rideTheBus,
     description: '',
-    enabled: false
+    enabled: true
 }
 const RingMaster: JokerType = {
     name: 'RingMaster',
@@ -383,13 +387,13 @@ const ScaryFace: JokerType = {
     name: 'ScaryFace',
     image: scaryFace,
     description: '',
-    enabled: false
+    enabled: true
 }
 const Scholar: JokerType = {
     name: 'Scholar',
     image: scholar,
     description: '',
-    enabled: false
+    enabled: true
 }
 const SeeingDouble: JokerType = {
     name: 'SeeingDouble',
@@ -407,7 +411,7 @@ const SmearedJoker: JokerType = {
     name: 'SmearedJoker',
     image: smearedJoker,
     description: '',
-    enabled: false
+    enabled: true
 }
 const SockAndBuskin: JokerType = {
     name: 'SockAndBuskin',
@@ -443,7 +447,7 @@ const Supernova: JokerType = {
     name: 'Supernova',
     image: supernova,
     description: '',
-    enabled: false
+    enabled: true
 }
 const Swashbuckler: JokerType = {
     name: 'Swashbuckler',
@@ -455,13 +459,13 @@ const TheAstronomer: JokerType = {
     name: 'TheAstronomer',
     image: theAstronomer,
     description: '',
-    enabled: false
+    enabled: true
 }
 const TheCartomancer: JokerType = {
     name: 'TheCartomancer',
     image: theCartomancer,
     description: '',
-    enabled: false
+    enabled: true
 }
 const TheDuo: JokerType = {
     name: 'TheDuo',
@@ -539,8 +543,21 @@ const ZanyJoker: JokerType = {
     name: 'ZanyJoker',
     image: zanyJoker,
     description: '',
-    enabled: false
+    enabled: true
 }
+
+// icecream
+// runner
+// blackboard
+// egg
+// burgler
+// dna
+// splash
+// constellation
+// hiker
+// superposition
+// to do list
+
 
 export default {
     AbstractJoker,
@@ -565,7 +582,7 @@ export default {
     DrollJoker,
     Drunkard,
     Dusk,
-    Eightball,
+    Eightball: EightBall,
     EvenSteven,
     Fibonacci,
     FlowerPot,

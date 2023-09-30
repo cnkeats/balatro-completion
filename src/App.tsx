@@ -8,39 +8,55 @@ import DeckList from './types/DeckList';
 
 
 const Grid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(4, 240px);s
-  outline: 1px solid black;
+    display: grid;
+    grid-template-columns: repeat(4, 192px);
+    grid-template-rows: repeat(4, 241px);
+    outline: 1px solid black;
+    grid-gap: 0px;
+`
+
+const GridItem = styled.div`
+    &:hover {
+        outline: 1px solid red;
+    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
 `
 
 function App() {
   
-  const decks = DeckList.map(d => {
-    return (
-      <img key={d.name} src={d.image}/>
+    const TickBox = (
+        <>X</>
     )
-  });
   
-  const rows = JokerList.filter(j => j.image !== '').map(j => {
-    return(
-      <>
-        <img key={j.name} src={j.image} />
-        <Checkbox key={`${j.name}0`}/>
-        <Checkbox key={`${j.name}1`}/>
-        <Checkbox key={`${j.name}2`}/>
-      </>
+    const gridItems: JSX.Element[] = [<img />];
+  
+    DeckList.forEach(d => {
+        gridItems.push(<img key={d.name} src={d.image}></img>);
+    });
+  
+    JokerList.forEach(j => {
+        gridItems.push(<img key={j.name} src={j.image} />);
+        DeckList.forEach(d => {
+            gridItems.push(
+                <GridItem>
+                    <Checkbox 
+                        style={{
+                            transform: "scale(3)",
+                        }}/>
+                </GridItem>
+            )
+        })
+    })
+  
+    return (
+        <div className="App">
+            <Grid>
+                {gridItems}
+            </Grid>   
+        </div>
     );
-  })
-  
-  return (
-    <div className="App">
-      <Grid>
-        <img />
-        {decks}
-        {rows}
-      </Grid>   
-    </div>
-  );
 }
 
 export default App;
