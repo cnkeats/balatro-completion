@@ -9,9 +9,10 @@ import DeckList from './types/DeckList';
 
 const Grid = styled.div`
     display: grid;
-    grid-template-columns: repeat(5, 142px);
+    grid-template-columns: repeat(5, auto);
     outline: 0px solid black;
     grid-gap: 0px;
+    max-width: 710px;
 `
 
 const GridItem = styled.div`
@@ -23,7 +24,7 @@ const GridItem = styled.div`
     justify-content: center;
 `
 
-const JokerName = styled.label`
+const BoldLabel = styled.label`
     display: flex;
     align-items: center;
     justify-content: center;
@@ -31,6 +32,13 @@ const JokerName = styled.label`
     font-weight: bold;
 `;
 
+const ImportExportLabel = styled.label`
+    cursor: pointer;
+    display: flex;
+    color: #069;
+    text-decoration: underline;
+    font-weight: bold;
+`;
 
 function App() {
     
@@ -67,23 +75,54 @@ function App() {
             setChecked({...temp})
         }
         
-        console.table(checked);
+        // console.table(checked);
         window.localStorage.setItem('CHECKED', JSON.stringify(checked));
+    }
+    
+    const json = JSON.stringify(checked);
+    const blob = new Blob([json], { type: 'application/json' });
+    const href = URL.createObjectURL(blob);
+    
+    const download = () => {
+        const link = document.createElement('a');
+        link.href = href;
+        link.download = 'joker-export.json';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        URL.revokeObjectURL(href);
     }
     
     const gridItems: JSX.Element[] = [<GridItem key='0' />, <GridItem key='1' />];
   
     DeckList.forEach(d => {
-        gridItems.push(<GridItem><JokerName>{d.name}</JokerName></GridItem>);
+        gridItems.push(<GridItem><BoldLabel>{d.name}</BoldLabel></GridItem>);
     });
-    gridItems.push(<GridItem key='0' />, <GridItem key='0' />);
+    
+    const ImportExport = () => {
+        return (
+            <GridItem key='import-export'>
+                <GridItem>
+                    <ImportExportLabel onClick={download}>
+                        Export
+                    </ImportExportLabel>
+                </GridItem>
+                <GridItem>
+                    <ImportExportLabel>
+                    </ImportExportLabel>
+                </GridItem>
+            </GridItem>  
+        )
+    };
+    
+    gridItems.push(<ImportExport/>, <GridItem key='3' />);
     DeckList.forEach(d => {
         gridItems.push(<GridItem><img key={d.name} src={d.image}></img></GridItem>);
     });
   
     JokerList.forEach(j => {
-        gridItems.push(<JokerName key={`${j.name}-name`}>{j.name}</JokerName>);
-        gridItems.push(<img key={j.name} src={j.image} />);
+        gridItems.push(<GridItem><BoldLabel key={`${j.name}-name`}>{j.name}</BoldLabel></GridItem>);
+        gridItems.push(<GridItem><img key={j.name} src={j.image} /></GridItem>);
         DeckList.forEach(d => {
             const jokerRecord = checked[j.name];
             const checkVal = jokerRecord ? jokerRecord[d.name] : false;
