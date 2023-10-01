@@ -3,6 +3,7 @@ import acrobat from './acrobat.png';
 import arrowhead from './arrowhead.png';
 import astronomer from './astronomer.png';
 import banner from './banner.png';
+import blackboard from './blackboard.png';
 import bloodstone from './bloodstone.png';
 import blueprint from './blueprint.png';
 import bootstraps from './bootstraps.png';
@@ -108,6 +109,7 @@ export {
     arrowhead,
     astronomer,
     banner,
+    blackboard,
     bloodstone,
     blueprint,
     bootstraps,
