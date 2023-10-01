@@ -109,12 +109,6 @@ function App() {
         }
     };
     
-    const gridItems: JSX.Element[] = [<GridItem key='0' />, <GridItem key='1' />];
-  
-    DeckList.forEach(d => {
-        gridItems.push(<GridItem key={`${d.name}-imageItem`}><BoldLabel>{d.name}</BoldLabel></GridItem>);
-    });
-    
     const ImportExport = () => {
         return (
             <GridItem key='import-export' style={{display: 'grid'}}>
@@ -133,7 +127,13 @@ function App() {
         )
     };
     
-    gridItems.push(<ImportExport key='import-export-item'/>, <GridItem key='3' />);
+    const gridItems: JSX.Element[] = [<ImportExport key='import-export-item'/>, <GridItem key='1' />];    
+  
+    DeckList.forEach(d => {
+        gridItems.push(<GridItem key={`${d.name}-imageItem`}><BoldLabel>{d.name}</BoldLabel></GridItem>);
+    });
+    
+    gridItems.push(<GridItem key='4' />, <GridItem key='3' />);
     DeckList.forEach(d => {
         gridItems.push(<GridItem key={`${d.name}-nameItem`}><img key={d.name} src={d.image}></img></GridItem>);
     });
