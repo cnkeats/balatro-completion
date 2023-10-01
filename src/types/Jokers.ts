@@ -1,9 +1,9 @@
-import { abstractJoker, acrobat, arrowhead, astronomer, banner, bloodstone, blueprint, bootstraps, brainstorm, burglar, burntJoker, businessCard, caino, cartomancer, ceremonialDagger, certificate, chaosTheClown, chicot, constellation, crazyJoker, creditCard,
+import { abstractJoker, acrobat, arrowhead, astronomer, banner, blackboard, bloodstone, blueprint, bootstraps, brainstorm, burglar, burntJoker, businessCard, caino, cartomancer, ceremonialDagger, certificate, chaosTheClown, chicot, constellation, crazyJoker, creditCard,
     delayedGratification, dna, driversLicense, drollJoker, drunkard, dusk, egg, eightball, evenSteven, fibonacci, flowerPot, fortuneTeller, fourFingers, glassJoker, gluttenousJoker, goldenJoker, goldenTicket, greedyJoker,
     grosMichel, hack, halfJoker, hangingChad, hiker, hitTheRoad, iceCream, invisibleJoker, joker, jokerStencil, jollyJoker, juggler, loyaltyCard, lustyJoker, madJoker, marbleJoker, matador, merryAndy, mime, misprint, mrBones,
     mysticSummit, oddTodd, onyxAgate, oopsAllsixes, pareidolia, perkeo, raisedFist, rideTheBus, ringMaster, roughGem, runner, satellite, scaryFace, scholar, seeingDouble, shootTheMoon, smearedJoker, sockAndBuskin, spaceJoker,
     splash,
-    steelJoker, stoneJoker, stuntman, supernova, superposition, swashbuckler, theAstronomer, theCartomancer, theDuo, theFamily, theIdol, theOrder, theTribe, theTrio, throwback, toDoList, triboulet, troubadour, weeJoker, wrathfulJoker, yorick, zanyJoker } from '../assets/jokers'
+    steelJoker, stoneJoker, stuntman, supernova, superposition, swashbuckler, theDuo, theFamily, theIdol, theOrder, theTribe, theTrio, throwback, toDoList, triboulet, troubadour, weeJoker, wrathfulJoker, yorick, zanyJoker } from '../assets/jokers'
 import { JokerType } from "./types"
 
 const AbstractJoker: JokerType = {
@@ -28,11 +28,17 @@ const Astronomer: JokerType = {
     name: 'Astronomer',
     image: astronomer,
     description: '',
-    enabled: false
+    enabled: true
 }
 const Banner: JokerType = {
     name: 'Banner',
     image: banner,
+    description: '',
+    enabled: true
+}
+const Blackboard: JokerType = {
+    name: 'Blackboard',
+    image: blackboard,
     description: '',
     enabled: true
 }
@@ -611,7 +617,9 @@ export default {
     AbstractJoker,
     Acrobat,
     Arrowhead,
+    Astronomer,
     Banner,
+    Blackboard,
     Bloodstone,
     Blueprint,
     Bootstraps,
