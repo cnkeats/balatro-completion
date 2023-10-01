@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import { ChangeEventHandler, FormEvent, useEffect, useState } from 'react';
 import './App.css';
-import * as jokers from './assets/jokers'
-import { Checkbox, ImageList, ImageListItem } from '@mui/material';
+import { Button, Checkbox, } from '@mui/material';
 import JokerList from './types/JokerList';
 import styled from 'styled-components';
 import DeckList from './types/DeckList';
@@ -40,6 +39,18 @@ const ImportExportLabel = styled.label`
     font-weight: bold;
 `;
 
+const VisuallyHiddenInput = styled('input')({
+    clip: 'rect(0 0 0 0)',
+    clipPath: 'inset(50%)',
+    height: 1,
+    overflow: 'hidden',
+    position: 'absolute',
+    bottom: 0,
+    left: 0,
+    whiteSpace: 'nowrap',
+    width: 1,
+});
+
 function App() {
     
     type JokerCheckStatus = Record<string, Record<string, boolean>>;
@@ -56,34 +67,26 @@ function App() {
     
     const toggle = (jokerName: string, deckName: string) => {
         if (jokerName in checked! && deckName in checked[jokerName]) {
-            // console.log('fully exists!');
-            const temp = checked;
-            temp[jokerName][deckName] = !checked[jokerName][deckName];
-            setChecked({...temp});
+            checked[jokerName][deckName] = !checked[jokerName][deckName];
+            setChecked({...checked});
         }
         else if (jokerName in checked) {
-            // console.log('joker exists!');
-            const temp = checked;
-            temp[jokerName][deckName] = true;
-            setChecked({...temp});
+            checked[jokerName][deckName] = true;
+            setChecked({...checked});
         }
         else {
-            // console.log('nothing exists!')
-            const temp = checked;
-            temp[jokerName] = {}
-            temp[jokerName][deckName] = true;
-            setChecked({...temp})
+            checked[jokerName] = {}
+            checked[jokerName][deckName] = true;
+            setChecked({...checked})
         }
         
-        // console.table(checked);
         window.localStorage.setItem('CHECKED', JSON.stringify(checked));
     }
     
-    const json = JSON.stringify(checked);
-    const blob = new Blob([json], { type: 'application/json' });
-    const href = URL.createObjectURL(blob);
-    
     const download = () => {
+        const json = JSON.stringify(checked);
+        const blob = new Blob([json], { type: 'application/json' });
+        const href = URL.createObjectURL(blob);
         const link = document.createElement('a');
         link.href = href;
         link.download = 'joker-export.json';
@@ -93,15 +96,28 @@ function App() {
         URL.revokeObjectURL(href);
     }
     
+    const upload = (event: React.ChangeEvent<HTMLInputElement>) => {
+        const fileReader = new FileReader();
+        const files = event.currentTarget.files;
+        const file = files?.item(0) as File;
+        
+        fileReader.readAsText(file, 'utf-8');
+        fileReader.onload = (e) => {
+            const content = e.target?.result as string;
+            const obj = JSON.parse(content);
+            setChecked(obj)
+        }
+    };
+    
     const gridItems: JSX.Element[] = [<GridItem key='0' />, <GridItem key='1' />];
   
     DeckList.forEach(d => {
-        gridItems.push(<GridItem><BoldLabel>{d.name}</BoldLabel></GridItem>);
+        gridItems.push(<GridItem key={`${d.name}-imageItem`}><BoldLabel>{d.name}</BoldLabel></GridItem>);
     });
     
     const ImportExport = () => {
         return (
-            <GridItem key='import-export'>
+            <GridItem key='import-export' style={{display: 'grid'}}>
                 <GridItem>
                     <ImportExportLabel onClick={download}>
                         Export
@@ -109,20 +125,22 @@ function App() {
                 </GridItem>
                 <GridItem>
                     <ImportExportLabel>
+                        Import
+                        <VisuallyHiddenInput type="file" onChange={upload} />
                     </ImportExportLabel>
                 </GridItem>
             </GridItem>  
         )
     };
     
-    gridItems.push(<ImportExport/>, <GridItem key='3' />);
+    gridItems.push(<ImportExport key='import-export-item'/>, <GridItem key='3' />);
     DeckList.forEach(d => {
-        gridItems.push(<GridItem><img key={d.name} src={d.image}></img></GridItem>);
+        gridItems.push(<GridItem key={`${d.name}-nameItem`}><img key={d.name} src={d.image}></img></GridItem>);
     });
   
     JokerList.forEach(j => {
-        gridItems.push(<GridItem><BoldLabel key={`${j.name}-name`}>{j.name}</BoldLabel></GridItem>);
-        gridItems.push(<GridItem><img key={j.name} src={j.image} /></GridItem>);
+        gridItems.push(<GridItem key={`${j.name}-nameItem`}><BoldLabel key={`${j.name}-name`}>{j.name}</BoldLabel></GridItem>);
+        gridItems.push(<GridItem key={`${j.name}-imageItem`}><img key={j.name} src={j.image} /></GridItem>);
         DeckList.forEach(d => {
             const jokerRecord = checked[j.name];
             const checkVal = jokerRecord ? jokerRecord[d.name] : false;
