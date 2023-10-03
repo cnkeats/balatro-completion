@@ -23,7 +23,7 @@ const GridItem = styled.div`
     justify-content: center;
 `
 
-const BoldLabel = styled.label`
+const BoldLabel = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
@@ -31,7 +31,7 @@ const BoldLabel = styled.label`
     font-weight: bold;
 `;
 
-const ImportExportLabel = styled.label`
+const ImportExportLabel = styled.div`
     cursor: pointer;
     display: flex;
     color: #069;
@@ -51,6 +51,9 @@ const VisuallyHiddenInput = styled('input')({
     width: 1,
 });
 
+const Header = styled.div`
+`;
+
 function App() {
     
     type JokerCheckStatus = Record<string, Record<string, boolean>>;
@@ -63,6 +66,7 @@ function App() {
         if ( data !== null ) {
             setChecked(JSON.parse(data));
         }
+        
     }, []);
     
     const toggle = (jokerName: string, deckName: string) => {
@@ -127,7 +131,37 @@ function App() {
         )
     };
     
-    const gridItems: JSX.Element[] = [<ImportExport key='import-export-item'/>, <GridItem key='1' />];    
+    const DeckProgress = (deckName: string) => {
+        const jokerCount = JokerList.length;
+        
+        if (Object.keys(checked).length === 0) {
+            return (
+                <BoldLabel key={`${deckName}-check-count`}>
+                    0 / {jokerCount}
+                </BoldLabel>
+            )
+        }
+        
+        const checkCount = Object.keys(checked).reduce((accumulator, joker) => accumulator + (checked[joker][deckName] ? 1 : 0), 0);
+        return (
+            <BoldLabel key={`${deckName}-check-count`}>
+                {checkCount} / {jokerCount}
+            </BoldLabel>
+        );
+        
+    }
+    
+    const gridItems: JSX.Element[] = [];
+    
+    // First row
+    gridItems.push(<ImportExport key='import-export-item'/>, <GridItem key='1' />);
+    
+    // Second row
+    DeckList.forEach(d => {
+        gridItems.push(DeckProgress(d.name));
+    })
+    
+    gridItems.push(<GridItem key='6' />, <GridItem key='5' />);
   
     DeckList.forEach(d => {
         gridItems.push(<GridItem key={`${d.name}-imageItem`}><BoldLabel>{d.name}</BoldLabel></GridItem>);
@@ -162,6 +196,8 @@ function App() {
   
     return (
         <div className="App">
+            <Header>
+            </Header>
             <Grid>
                 {gridItems}
             </Grid>   
