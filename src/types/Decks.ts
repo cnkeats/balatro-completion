@@ -1,10 +1,16 @@
-import { abandonedDeck, blackDeck, blueDeck, braidedDeck, checkeredDeck, erraticDeck, foilDeck, greenDeck, magicDeck, nebulaDeck, polychromeDeck, redDeck, silverDeck, yellowDeck } from "../assets/decks";
+import { abandonedDeck, anaglyphDeck, blackDeck, blueDeck, braidedDeck, checkeredDeck, erraticDeck, foilDeck, greenDeck, magicDeck, nebulaDeck, polychromeDeck, redDeck, silverDeck, yellowDeck } from "../assets/decks";
 import { DeckType } from "./types";
 
 const AbandonedDeck: DeckType = {
     name: 'Abandoned Deck',
     description: '',
     image: abandonedDeck,
+    enabled: false
+}
+const AnaglyphDeck: DeckType = {
+    name: 'Anaglyph Deck',
+    description: '',
+    image: anaglyphDeck,
     enabled: true
 }
 const BlackDeck: DeckType = {
@@ -17,7 +23,7 @@ const BlueDeck: DeckType = {
     name: 'Blue Deck',
     description: '',
     image: blueDeck,
-    enabled: false
+    enabled: true
 }
 const BraidedDeck: DeckType = {
     name: 'Braided Deck',
@@ -53,7 +59,7 @@ const MagicDeck: DeckType = {
     name: 'Magic Deck',
     description: '',
     image: magicDeck,
-    enabled: false
+    enabled: true
 }
 const NebulaDeck: DeckType = {
     name: 'Nebula Deck',
@@ -71,7 +77,7 @@ const RedDeck: DeckType = {
     name: 'Red Deck',
     description: '',
     image: redDeck,
-    enabled: true
+    enabled: false
 }
 const SilverDeck: DeckType = {
     name: 'Silver Deck',
@@ -83,11 +89,23 @@ const YellowDeck: DeckType = {
     name: 'Yellow Deck',
     description: '',
     image: yellowDeck,
-    enabled: true
+    enabled: false
 }
 
 export default {
+    AbandonedDeck,
+    AnaglyphDeck,
+    BlackDeck,
+    BlueDeck,
+    BraidedDeck,
+    CheckeredDeck,
+    ErraticDeck,
+    FoilDeck,
+    GreenDeck,
+    MagicDeck,
+    NebulaDeck,
+    PolychromeDeck,
     RedDeck,
-    YellowDeck,
-    AbandonedDeck
+    SilverDeck,
+    YellowDeck
 }

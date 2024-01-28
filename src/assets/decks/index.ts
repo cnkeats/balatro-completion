@@ -1,4 +1,5 @@
 import abandonedDeck from './deck_abandoned.png';
+import anaglyphDeck from './deck_anaglyph.png';
 import blackDeck from './deck_black.png';
 import blueDeck from './deck_blue.png';
 import braidedDeck from './deck_braided.png';
@@ -15,6 +16,7 @@ import yellowDeck from './deck_yellow.png';
 
 export {
     abandonedDeck,
+    anaglyphDeck,
     blackDeck,
     blueDeck,
     braidedDeck,
