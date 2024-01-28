@@ -617,25 +617,25 @@ const ZanyJoker: JokerType = {
 
 // New jokers
 const SlyJoker: JokerType = {
-    name: 'Sly',
+    name: 'Sly Joker',
     image: slyJoker,
     description: '',
     enabled: true
 }
 const WilyJoker: JokerType = {
-    name: 'Wily',
+    name: 'Wily Joker',
     image: wilyJoker,
     description: '',
     enabled: true
 }
 const DeviousJoker: JokerType = {
-    name: 'Devious',
+    name: 'Devious Joker',
     image: deviousJoker,
     description: '',
     enabled: true
 }
 const CraftyJoker: JokerType = {
-    name: 'Crafty',
+    name: 'Crafty Joker',
     image: craftyJoker,
     description: '',
     enabled: true
@@ -861,24 +861,3 @@ export default {
     Popcorn,
     TradingCard
 }
-
-// Sly
-// Wily
-// Devious
-// Crafty
-// Gift Card
-// Spare Trousers
-// Green Joker
-// Seance
-// Shortcut
-// Hologram
-// Vagabond
-// Obelisk
-// Photograph
-// Ramen
-// Reversed Parking
-// Baseball Card
-// Bull
-// Diet Cola
-// Popcorn
-// Trading Card
