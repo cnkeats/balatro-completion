@@ -672,7 +672,7 @@ const Throwback: JokerType = {
     name: 'Throwback',
     image: throwback,
     description: '',
-    enabled: false
+    enabled: true
 }
 const ToDoList: JokerType = {
     name: 'To-Do List',
